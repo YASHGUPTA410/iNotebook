@@ -23,7 +23,13 @@ app.use(express.json())
 
 app.use((req,res,next)=>{
     if(req.method==="OPTIONS")
+    {
         next();
+    }else{
+        next();
+    }
+ 
+
 })
 // Routes
 app.get('/', (req, res) => {
