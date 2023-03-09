@@ -21,7 +21,10 @@ app.use(cors())
 // middleware
 app.use(express.json())
 
-
+app.use((req,res,next)=>{
+    if(req.method==="OPTIONS")
+        next();
+})
 // Routes
 app.get('/', (req, res) => {
     res.send("Hello world")
